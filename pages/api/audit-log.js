@@ -26,7 +26,8 @@ export default async function handler(req, res) {
       actionType,
       startDate,
       endDate,
-      userId
+      userId,
+      applicationId
     } = req.query
     const callApi = await fetch("https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f");
     const datatables = await callApi.json();
@@ -38,6 +39,11 @@ export default async function handler(req, res) {
     // filter
     if (!!applicationType) {
       data = data.filter(filters.bind(this, 'applicationType', applicationType));
+      totalRecords = data.length
+    }
+
+    if (!!applicationId) {
+      data = data.filter(filters.bind(this, 'applicationId', applicationId));
       totalRecords = data.length
     }
     if (!!actionType) {

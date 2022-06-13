@@ -29,14 +29,21 @@ const FormComponent = () => {
           <label>Action type</label>
           <select defaultValue={0} onChange={(e) => updateFilter('actionType', e.target.value)}>
             <option value={0} disabled>choose</option>
-            <option value={1}>1</option>
+            <option value={'DARI_REFRESH_TOKEN'}>DARI_REFRESH_TOKEN</option>
+            <option value={'SUBMIT_APPLICATION'}>SUBMIT_APPLICATION</option>
+            <option value={'INITIATE_APPLICATION'}>INITIATE_APPLICATION</option>
+            <option value={'ADD_COMPANY'}>ADD_COMPANY</option>
           </select>
         </div>
         <div>
           <label>Application type</label>
           <select defaultValue={0} onChange={(e) => updateFilter('applicationType', e.target.value)}>
             <option value={0} disabled>choose</option>
-            <option value={1}>1</option>
+            <option value={'ADD_COMPANY_EMPLOYEE'}>ADD_COMPANY_EMPLOYEE</option>
+            <option value={'CERT_TITLE_DEED_PLOT'}>CERT_TITLE_DEED_PLOT</option>
+            <option value={'ADD_POA'}>ADD_POA</option>
+            <option value={'LEASE_REGISTRATION'}>LEASE_REGISTRATION</option>
+            <option value={'CERT_PROP_OWNERSHIP'}>CERT_PROP_OWNERSHIP</option>
           </select>
         </div>
         <div>
