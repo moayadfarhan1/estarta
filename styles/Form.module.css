@@ -1,0 +1,48 @@
+
+.form {
+  width: 100%;
+}
+
+.formContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formContainer div{
+  width: 14%;
+}
+
+.formContainer div:last-child{
+  margin-bottom: 3px;
+  align-self: end;
+}
+
+.formContainer label{
+  display: block;
+  margin-bottom: 3px;
+  font-size: 1rem;
+}
+
+.formContainer input,.formContainer select{
+  display: block;
+    margin-bottom: 3px;
+    font-size: 1rem;
+    padding: 0 10px;
+    width: 100%;
+    border: 1px solid #c7c7c7;
+    height: 36px;
+    border-radius: 10px;
+}
+
+.btnSubmit{
+  background:  #11499c;
+  font-weight: bold;
+  color: #ffff;
+  border-radius: 10px;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 32px;
+  width: 100%;
+}
