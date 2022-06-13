@@ -1,0 +1,68 @@
+
+.table tbody , .table td ,.table tfoot ,.table th,.table thead, .table tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+}
+
+.table>:not(caption)>*>* {
+  text-align: start;
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination ul li{
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  margin: 0 10px;
+}
+
+.pagination ul li.nextBtn  a::before{
+  content: '>';
+  display: block;
+}
+
+.pagination ul li.prevBtn a::before{
+  content: '<';
+  display: block;
+}
+
+.activePage{
+  background: #dee2e6;
+  font-weight: bold;
+}
