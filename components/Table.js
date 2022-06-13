@@ -2,7 +2,7 @@ import stylesTable from '../styles/Table.module.css'
 import ReactPaginate from 'react-paginate';
 import {useState, useEffect} from 'react';
 import { useRouter } from 'next/router';
-const tableComponent = ({ datatables }) => {
+const TableComponent = ({ datatables }) => {
     const router = useRouter();
     const itemsPerPage = datatables.totalRecords;
     
@@ -67,4 +67,4 @@ const tableComponent = ({ datatables }) => {
     )
 }
 
-export default tableComponent;
+export default TableComponent;

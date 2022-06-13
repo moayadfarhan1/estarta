@@ -1,9 +1,8 @@
 import stylesForm from '../styles/Form.module.css'
-import useStore from '../hooks/store';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const formComponent = () => {
+const FormComponent = () => {
   
   const router = useRouter();
   const [fitler, setFilter] = useState({});
@@ -60,4 +59,4 @@ const formComponent = () => {
   )
 }
 
-export default formComponent;
+export default FormComponent;

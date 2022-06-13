@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import TableComponent from '../components/Table'
 import FormComponent from '../components/Form'
-import axios from 'axios'
 import React, {useState, useEffect } from "react";
 import { StoreContextProvider } from '../hooks/store'
 import { useRouter } from 'next/router'
