@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const FormComponent = () => {
-  
+
   const router = useRouter();
   const [fitler, setFilter] = useState({});
   const updateFilter = (key, value) => {
@@ -17,9 +17,17 @@ const FormComponent = () => {
     router.query = fitler;
     router.push(router);
   }
-  
+
+  const applyClearFilter=()=>{
+    router.query = '';
+    const form = document.getElementById('form-search');
+    form.reset();
+
+    router.push(router);
+  }
+
   return (
-    <form className={stylesForm.form} >
+    <form className={stylesForm.form} id="form-search">
       <div className={stylesForm.formContainer}>
         <div>
           <label>Employee Name</label>
@@ -60,6 +68,7 @@ const FormComponent = () => {
         </div>
         <div>
           <button type='button' onClick={() => applyFilter()} className={stylesForm.btnSubmit}>Search Logger</button>
+          <button type='button' onClick={() => applyClearFilter()} className={stylesForm.btnSubmit}>clear</button>
         </div>
       </div>
     </form>
